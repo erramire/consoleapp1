@@ -1,17 +1,18 @@
-name: .NET Core
-
+name: .NET Core Workflow
 on: [push]
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-dotnet@v1
-      name: Setup .Net Core
+   name: Build .Net Core Application    
+   runs-on: ubuntu-latest
+   steps:
+    - name: Checkout Code
+      id: checkout_code
+      uses: actions/checkout@v1
+    - name: Setup .Net Core
+      id: setup_net_core
+      uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.0.100
-    - name: Run dotnet build with Release Configuration
+    - name: Build .Net Core Application - Release Version
       run: dotnet build --configuration Release
