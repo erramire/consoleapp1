@@ -14,3 +14,5 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.0.100
+    - name: Build .Net Core Application - Release Version
+      run: dotnet build --configuration Release
