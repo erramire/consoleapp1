@@ -6,9 +6,9 @@ namespace consoleapp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("Esto es un saludo por parte de Erick");
-            Console.WriteLine("ya cambio el Otro saludo por parte de Erick");
+            
+            Console.WriteLine("Esto es un saludo por parte de Erick para Comisión Federal de Electricidad");
+            
         }
     }
 }
